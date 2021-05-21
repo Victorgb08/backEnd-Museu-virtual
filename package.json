@@ -1,0 +1,26 @@
+{
+  "name": "backend-museu-virtual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Victorgb08/backEnd-Museu-virtual.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Victorgb08/backEnd-Museu-virtual/issues"
+  },
+  "homepage": "https://github.com/Victorgb08/backEnd-Museu-virtual#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.6",
+    "nodemon": "^2.0.7",
+    "sqlite3": "^5.0.2"
+  }
+}
