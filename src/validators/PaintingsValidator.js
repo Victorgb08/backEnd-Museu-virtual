@@ -9,8 +9,10 @@ module.exports = {
             title: Joi.string().required(),
             description: Joi.string().required(),
             objective: Joi.string().required(),
-            url_img: Joi.string().required(),
+            src: Joi.string().required(),
             category: Joi.string().required(),
+            width: Joi.required(),
+            height: Joi.required(),
         }),
         [Segments.HEADERS]: Joi.object()
         .keys({
@@ -39,6 +41,8 @@ module.exports = {
             objective: Joi.string().optional(),
             url_img: Joi.string().optional(),
             category: Joi.string().optional(),
+            width: Joi.optional(),
+            height: Joi.optional(),
         })
         .min(1),
     }),

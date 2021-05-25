@@ -9,8 +9,10 @@ exports.up = function(knex) {
         table.string("title").notNullable();
         table.string("description").notNullable();
         table.string("objective").notNullable();
-        table.string("url_img").notNullable();
+        table.string("src").notNullable();
         table.string("category").notNullable();
+        table.float("width").notNullable();
+        table.float("height").notNullable();
     });
 };
 
