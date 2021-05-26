@@ -29,13 +29,13 @@ const SessionController = require("./controllers/SessionController");
     routes.delete("/users/:user_id", UsersValidator.delete, UsersController.delete);
 
     //Paintings
-    routes.post("/paintings", PaintingsValidator.create, auth.authenticateToken, PaintingsController.create);
+    routes.post("/paintings", PaintingsValidator.create, PaintingsController.create);
     routes.get("/paintings", PaintingsController.index);
-    routes.get("/paintings/:user_id", PaintingsValidator.getByUserId, auth.authenticateToken, PaintingsController.getByUserId);
+    routes.get("/paintings/:user_id", PaintingsValidator.getByUserId, PaintingsController.getByUserId);
     //Atenção, para pegar uma pintura o caminho é painting, nao tem o 's' no final
-    routes.get("/painting/:painting_id", PaintingsValidator.getById, auth.authenticateToken, PaintingsController.getById);
-    routes.put("/paintings/:painting_id", PaintingsValidator.update, auth.authenticateToken, PaintingsController.update);
-    routes.delete("/paintings/:painting_id", PaintingsValidator.delete, auth.authenticateToken, PaintingsController.delete);
+    routes.get("/painting/:painting_id", PaintingsValidator.getById, PaintingsController.getById);
+    routes.put("/paintings/:painting_id", PaintingsValidator.update, PaintingsController.update);
+    routes.delete("/paintings/:painting_id", PaintingsValidator.delete, PaintingsController.delete);
 
     //Comments
     routes.post("/comments", CommentsValidator.create, CommentsController.create);
@@ -47,3 +47,13 @@ const SessionController = require("./controllers/SessionController");
     routes.delete("/comments/:comments_id", CommentsValidator.delete, CommentsController.delete);
 
 module.exports = routes;
+
+
+// //Paintings
+// routes.post("/paintings", PaintingsValidator.create, auth.authenticateToken, PaintingsController.create);
+// routes.get("/paintings", PaintingsController.index);
+// routes.get("/paintings/:user_id", PaintingsValidator.getByUserId, auth.authenticateToken, PaintingsController.getByUserId);
+// //Atenção, para pegar uma pintura o caminho é painting, nao tem o 's' no final
+// routes.get("/painting/:painting_id", PaintingsValidator.getById, auth.authenticateToken, PaintingsController.getById);
+// routes.put("/paintings/:painting_id", PaintingsValidator.update, auth.authenticateToken, PaintingsController.update);
+// routes.delete("/paintings/:painting_id", PaintingsValidator.delete, auth.authenticateToken, PaintingsController.delete);
