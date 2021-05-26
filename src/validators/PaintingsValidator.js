@@ -11,8 +11,8 @@ module.exports = {
             objective: Joi.string().required(),
             src: Joi.string().required(),
             category: Joi.string().required(),
-            width: Joi.required(),
-            height: Joi.required(),
+            width: Joi.number().min(1).max(4).required(),
+            height: Joi.number().min(1).max(4).required(),
         }),
         [Segments.HEADERS]: Joi.object()
         .keys({
@@ -41,8 +41,8 @@ module.exports = {
             objective: Joi.string().optional(),
             url_img: Joi.string().optional(),
             category: Joi.string().optional(),
-            width: Joi.optional(),
-            height: Joi.optional(),
+            width: Joi.number().min(1).max(4).optional(),
+            height: Joi.number().min(1).max(4).optional(),
         })
         .min(1),
     }),

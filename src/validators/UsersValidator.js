@@ -8,7 +8,7 @@ module.exports = {
             email: Joi.string().email().required(),
             password: Joi.string().min(6).required(),
             question: Joi.string().required(),
-            url_perfil: Joi.string().required(),
+            url_perfil: Joi.string().optional(),
         })
     }),
     getById: celebrate({
