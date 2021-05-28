@@ -11,8 +11,7 @@ exports.up = function(knex) {
         table.string("objective").notNullable();
         table.string("src").notNullable();
         table.string("category").notNullable();
-        table.float("width").notNullable();
-        table.float("height").notNullable();
+        table.float("count").notNullable();
     });
 };
 
